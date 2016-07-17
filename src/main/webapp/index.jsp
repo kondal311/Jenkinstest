@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title> Test Jenkins</title>
+	<title> Test   Jenkins</title>
 </head>
 <body>
 <h2>Hello World !</h2>
