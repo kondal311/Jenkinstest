@@ -35,6 +35,9 @@ curl http://localhost:8080/
 
 # Test the hello endpoint
 curl http://localhost:8080/hello
+
+# Test the hello endpoint with a custom name
+curl "http://localhost:8080/hello?name=John"
 ```
 
 ### Run Tests
@@ -48,3 +51,4 @@ mvn test
 |----------|--------|-------------|----------|
 | `/` | GET | Welcome message | `Welcome to Jenkins Test Spring Boot Application! Visit /hello for the greeting.` |
 | `/hello` | GET | Hello World greeting | `Hello World updated with Spring Boot!` |
+| `/hello?name={name}` | GET | Hello greeting with custom name | `Hello {name} updated with Spring Boot!` |
