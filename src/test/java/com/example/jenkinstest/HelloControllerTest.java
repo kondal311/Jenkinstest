@@ -23,6 +23,13 @@ public class HelloControllerTest {
     }
 
     @Test
+    public void testHelloEndpointWithName() throws Exception {
+        mockMvc.perform(get("/hello").param("name", "John"))
+                .andExpect(status().isOk())
+                .andExpect(content().string("Hello John updated with Spring Boot!"));
+    }
+
+    @Test
     public void testHomeEndpoint() throws Exception {
         mockMvc.perform(get("/"))
                 .andExpect(status().isOk())
